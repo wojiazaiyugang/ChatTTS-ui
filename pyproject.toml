@@ -10,7 +10,7 @@ documentation = "https://github.com/jianchang512/ChatTTS-ui"
 package-mode = false
 
 [tool.poetry.dependencies]
-python = "^3.10"
+python = "^3.9"
 soundfile = "^0.12.1"
 python-dotenv = "^1.0.1"
 flask = "^3.0.3"
@@ -35,11 +35,20 @@ numpy = { version = "^1.26.4" }
 # Optional dependencies that are not downloaded by default
 fastapi = { version = "*", extras = ["all"], optional = true }
 pydantic = { version = "^2", optional = true }
+pybase16384 = "^0.3.7"
+numba = "^0.60.0"
+pandas = "^2.2.2"
 
 [[tool.poetry.source]]
 name = "pytorch-gpu-src"
 url = "https://download.pytorch.org/whl/cu118"
 priority = "explicit"
+
+
+[[tool.poetry.source]]
+name = "ustc"
+url = "https://pypi.mirrors.ustc.edu.cn/simple/"
+priority = "primary"
 
 [tool.poetry.group.dev.dependencies]
 black = "*"
