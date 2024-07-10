@@ -21,6 +21,7 @@ def main() -> None:
     models_dir = PROJECT_DIR.joinpath("models")
     static_dir = PROJECT_DIR.joinpath("static")
     templates_dir = PROJECT_DIR.joinpath("templates")
+    env_file = PROJECT_DIR.joinpath(".env")
     command = (
         f"""poetry run pyinstaller """
         f"""-D """
@@ -28,6 +29,7 @@ def main() -> None:
         f"""--add-data {models_dir}:{models_dir.relative_to(PROJECT_DIR)}  """
         f"""--add-data {static_dir}:{static_dir.relative_to(PROJECT_DIR)}  """
         f"""--add-data {templates_dir}:{templates_dir.relative_to(PROJECT_DIR)}  """
+        f"""--add-data {env_file}:{env_file.relative_to(PROJECT_DIR)}  """
         f"""--windowed """
         f"""-y """
         f"""--contents-directory . """  # 把exe跟资源打包到一起
