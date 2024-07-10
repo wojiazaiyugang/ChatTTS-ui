@@ -11,10 +11,10 @@ from pathlib import Path
 print('Starting...')
 import shutil
 import time
-if not shutil.which("ffmpeg"):
-    print('请先安装ffmpeg')
-    time.sleep(60)
-    exit()
+# if not shutil.which("ffmpeg"):
+#     print('请先安装ffmpeg')
+#     time.sleep(60)
+#     exit()
 import torch
 import torch._dynamo
 torch._dynamo.config.suppress_errors = True

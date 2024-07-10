@@ -17,7 +17,8 @@ __pycache__
 pack.bat
 gitcmd.bat
 logs
-poetry.lock
 docs
 examples
 ffmpeg/ffmpeg.exe
+/speaker/
+/static/wavs/

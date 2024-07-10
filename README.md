@@ -315,3 +315,10 @@ print(res.json())
 
 ![image](https://github.com/jianchang512/ChatTTS-ui/assets/3378335/7118325f-2b9a-46ce-a584-1d5c6dc8e2da)
 
+## windows使用poetry配置环境
+除了poetry直接安装的外，还要
+```bash
+pip install torch==2.3.1+cu118 torchaudio==2.3.1+cu118 -i https://download.pytorch.org/whl/cu118
+pip install vector-quantize-pytorch
+pip install vocos>=0.1.0
+```
