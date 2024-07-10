@@ -10,7 +10,7 @@ documentation = "https://github.com/jianchang512/ChatTTS-ui"
 package-mode = false
 
 [tool.poetry.dependencies]
-python = "^3.9"
+python = ">=3.9,<3.13"
 soundfile = "^0.12.1"
 python-dotenv = "^1.0.1"
 flask = "^3.0.3"
@@ -53,6 +53,7 @@ priority = "primary"
 [tool.poetry.group.dev.dependencies]
 black = "*"
 ruff = "*"
+pyinstaller = "^6.9.0"
 
 [tool.poetry.group.test.dependencies]
 # https://docs.pytest.org/en/stable/reference/plugin_list.html#plugin-list
