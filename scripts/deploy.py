@@ -30,7 +30,7 @@ def main() -> None:
         f"""--add-data {static_dir}:{static_dir.relative_to(PROJECT_DIR)}  """
         f"""--add-data {templates_dir}:{templates_dir.relative_to(PROJECT_DIR)}  """
         f"""--add-data {env_file}:. """
-        f"""--windowed """
+        # f"""--windowed """
         f"""-y """
         f"""--contents-directory . """  # 把exe跟资源打包到一起
         f"""--workpath {BUILD_WORK_DIR} """
