@@ -40,6 +40,18 @@ name = "ustc"
 url = "https://pypi.mirrors.ustc.edu.cn/simple/"
 priority = "primary"
 
+[tool.poetry.group.linux.dependencies]
+torch = [
+    { version = "^2.3.0+cu118", source = "pytorch-gpu-src" },
+    { platform = "darwin", version = "^2" }
+]
+torchaudio = [
+    { version = "^2.3.0+cu118", source = "pytorch-gpu-src" },
+    { platform = "darwin", version = "^2" }
+]
+vocos = "^0.1.0"
+vector-quantize-pytorch = "^1.14.24"
+
 [tool.poetry.group.dev.dependencies]
 black = "*"
 ruff = "*"
