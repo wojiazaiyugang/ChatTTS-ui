@@ -190,14 +190,14 @@ def tts():
     rand_spk=None
     # voice可能是 {voice}.csv or {voice}.pt or number
     voice=voice.replace('.csv','.pt')
-    seed_path=f'{SPEAKER_DIR}/{voice}'
+    seed_path=f'{SPEAKER_DIR}/{voice}.pt'
     print(f'{voice=}')
     #if voice.endswith('.csv') and os.path.exists(seed_path):
     #    rand_spk=utils.load_speaker(voice)
     #    print(f'当前使用音色 {seed_path=}')
     #el
     
-    if voice.endswith('.pt') and os.path.exists(seed_path):
+    if os.path.exists(seed_path):
         #如果.env中未指定设备，则使用 ChatTTS相同算法找设备，否则使用指定设备
         rand_spk=torch.load(seed_path, map_location=select_device(4096) if device=='default' else torch.device(device))
         print(f'当前使用音色 {seed_path=}')
